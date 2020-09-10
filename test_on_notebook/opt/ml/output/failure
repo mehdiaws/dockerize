@@ -1,0 +1,17 @@
+Exception during training: "['PE_'] not found in axis"
+Traceback (most recent call last):
+  File "<ipython-input-7-15953bd00a20>", line 6, in train
+    train_final_model(parameters)
+  File "<ipython-input-3-abd972fca9e2>", line 10, in train_final_model
+    train_x, train_y, test_x, test_y = data_prep(raw_data)
+  File "<ipython-input-2-f36359315875>", line 12, in data_prep
+    train_x = train_data.drop([target], axis=1)
+  File "/home/ec2-user/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/pandas/core/frame.py", line 3997, in drop
+    errors=errors,
+  File "/home/ec2-user/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/pandas/core/generic.py", line 3936, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/home/ec2-user/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/pandas/core/generic.py", line 3970, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/home/ec2-user/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 5017, in drop
+    raise KeyError(f"{labels[mask]} not found in axis")
+KeyError: "['PE_'] not found in axis"
